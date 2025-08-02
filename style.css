@@ -459,7 +459,7 @@ background-color: #0758a8;
   }
 
   .hero-text-div {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 80%;
     z-index: 99;
   }
