@@ -163,6 +163,7 @@ background-color: #0758a8;
   transform: translate(-50%,-50%);
   /* border: 4px solid white; */
   margin-inline: auto;
+  z-index: 99;
 }
 
 /* SLIDER */
@@ -261,32 +262,50 @@ background-color: #0758a8;
   background-color: #e6b800;
 }
 
-/* About Section */
-.about {
-  padding: 60px 0;
+/* Welcome Section */
+.section-welcome {
+  padding: 30px;
   background-color: #ffffff;
-  text-align: center;
-  width: 80%;
+  /* text-align: center; */
+  width: 100%;
   margin: 0 auto;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
-.about .container {
+.section-welcome .container {
   display: flex;
+  gap: 6rem;
 }
 
-.about-us-card {
+.section-welcome-text {
   width: 50%;
-  text-align: left;
+  text-align: justify;
+  line-height: 2;
+  font-size: 1.2rem;
 }
-
-.about-us-card img {
+.section-welcome-image {
+  width: 50%;
+}
+.section-welcome-image img {
   width: 100%;
 }
 
-.about h3 {
-  font-size: 28px;
-  margin-bottom: 15px;
+.section-welcome h3 {
+  font-size: 2rem;
+  margin-bottom: 1px;
+  background-color: #004080;
+  color: white;
+  padding-left: 3rem;
+}
+
+.welcome-read-more-button {
+  padding: 2rem;
+  text-decoration: none;
+  background-color: #004080;
+  color: white;
+  margin-top: 3rem;
+  font-size: 1.4rem;
+  display: inline-block;
 }
 
 /* Programs Section */
@@ -414,7 +433,9 @@ background-color: #0758a8;
 }
 
 .menu a:hover {
-    background: #555;
+    /* background: #555; */
+    background: #004080;
+
 }
 
 /* Toggle the menu when checkbox is checked */
@@ -451,6 +472,7 @@ background-color: #0758a8;
   display: none;
 }
 
+/* hero style */
   .hero {
     position: relative;
   }
@@ -464,15 +486,26 @@ background-color: #0758a8;
     z-index: 99;
   }
 
+  /* welcome style */
+
+  .section-welcome-text {
+    width: 100%;
+  }
+
+.section-welcome-image {
+  display: none;
+}
+
   .program-list {
     flex-direction: column;
   }
 
-  .overlay {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    z-index: 10;
-  }
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 10;
 }
