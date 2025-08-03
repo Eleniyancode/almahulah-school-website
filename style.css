@@ -143,6 +143,9 @@ background-color: #0758a8;
   border-bottom: 2px solid white;
 }
 
+.arrow-down, .arrow-up {
+  font-size: 1.2rem;
+}
 /* Hero Section */
 .hero {
   /* background: url('./assets/image/schoolboyimage.jpg') center/cover no-repeat; */
