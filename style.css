@@ -267,7 +267,7 @@ background-color: #0758a8;
   padding: 30px;
   background-color: #ffffff;
   /* text-align: center; */
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   /* border: 2px solid red; */
 }
@@ -292,7 +292,7 @@ background-color: #0758a8;
 
 .section-welcome h3 {
   font-size: 2rem;
-  margin-bottom: 1px;
+  margin-bottom: 1rem;
   background-color: #004080;
   color: white;
   padding-left: 3rem;
@@ -363,9 +363,49 @@ background-color: #0758a8;
 .footer {
   background-color: #004080;
   color: white;
-  text-align: center;
-  padding: 20px 0;
+  /* text-align: center; */
+  padding-block: 20px 0;
   font-size: 14px;
+  /* position: relative; */
+}
+.footer-logo img {
+  width: 5rem;
+  height: 5rem;
+}
+footer .container {
+  display: flex;
+  gap: 4rem;
+}
+
+.footer-div {
+  width: 35%;
+  padding: 4rem;
+  text-align: justify;
+}
+
+.footer-contact-div {
+  display: flex;
+  padding: 4rem;
+  gap: 6rem;
+}
+
+.footer-contact-address-div {
+  width: 30%;
+}
+
+.footer-contact-div div a {
+  text-decoration: none;
+  color: white;
+}
+.copyright {
+  background-color: #002a53;
+  /* position: absolute; */
+  margin-top: 2rem;
+  /* bottom: 0; */
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+
 }
 
 /* Hide the checkbox */
@@ -488,6 +528,10 @@ background-color: #0758a8;
 
   /* welcome style */
 
+  .section-welcome {
+    width: 100%;
+  }
+
   .section-welcome-text {
     width: 100%;
   }
@@ -499,6 +543,42 @@ background-color: #0758a8;
   .program-list {
     flex-direction: column;
   }
+
+  /* footer style */
+  
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: unset;
+    padding-inline: unset;
+    padding-bottom: unset;
+  }
+
+  .footer-div {
+    width: 100%;
+    text-align: center;
+    padding-block: unset;
+  }
+
+  .footer-contact-div {
+    flex-wrap: wrap;
+    padding-inline: unset;
+  }
+
+  .footer-contact-div p {
+    font-size: 1.2rem;
+  }
+
+  .footer-contact-div {
+  display: flex;
+  padding: 2rem;
+  /* justify-content: space-around; */
+  gap: 3rem;
+}
+
+.footer-contact-div div {
+  width: 40%;
+}
 
 }
 
