@@ -152,3 +152,44 @@ document.addEventListener('keydown', function(e) {
 }
 
 slider();
+
+//handling the news section pagination functionality
+const newsPostArray = Array.from(document.querySelectorAll('.news-card'));
+const numsPerPage = 2;
+let currentPage = 1
+console.log(newsPostArray);
+
+function showPostPage(page) {
+  const start = (page - 1) * numsPerPage;
+  const end = page * numsPerPage;
+
+  // show item with animation after a short delay
+    setTimeout(() => {
+        newsPostArray.forEach((item, i) => {
+            if (i >= start && i < end) {
+                item.style.display = 'block';
+                setTimeout(() => item.classList.add('show'), 60)
+            }else {
+                item.style.display = 'none'
+                setTimeout(() => item.classList.remove('show'), 60)
+            }
+            
+        })
+    })
+
+    document.getElementById('page-number').innerText = page;
+}
+
+//handle change of post page on click
+function changePage(direction) {
+    const totalPages = Math.ceil (newsPostArray.length / numsPerPage);
+    currentPage += direction;
+
+    if (currentPage < 1) currentPage = 1;
+    if (currentPage > totalPages) currentPage = totalPages;
+
+    showPostPage(currentPage)
+}
+
+//Initialize first page
+showPostPage(currentPage);
