@@ -137,21 +137,48 @@ const prevSlide = function() {
 showSlide(currslid)
 }
 
-
 //Event handlers
 btnRight.addEventListener('click', nextSlide)
 btnLeft.addEventListener('click', prevSlide)
+
 
 //functionality for the arrow right and left key slide
 document.addEventListener('keydown', function(e) {
   // console.log(e);
   if (e.key === 'ArrowRight') nextSlide()
-   e.key === 'ArrowLeft' && prevSlide()
+    e.key === 'ArrowLeft' && prevSlide()
 })
 
 }
 
 slider();
+
+
+//Handling school leader slider function
+const leaderSlide = document.getElementById('slideshowTrack');
+const totalSlides = 6;
+const visibleSlides = 3;
+const slideWidth = 320
+let index = 0;
+
+function moveSlide() {
+  index++;
+  leaderSlide.style.transition = `transform 1s ease-in-out`
+  leaderSlide.style.transform = `translateX(-${slideWidth * index}px)`;
+
+  // If at the last real image group (6, plus 3 clones), reset soon after animation
+  if (index === totalSlides) {
+    setTimeout(() => {
+      // Reset instantly without transition
+      leaderSlide.style.transition = 'none';
+      leaderSlide.style.transform = 'translateX(0)';
+      index = 0
+    }, 1000)
+  }
+
+}
+setInterval(moveSlide, 3000)
+
 
 //handling the news section pagination functionality
 const newsPostArray = Array.from(document.querySelectorAll('.news-card'));
@@ -193,3 +220,25 @@ function changePage(direction) {
 
 //Initialize first page
 showPostPage(currentPage);
+
+
+//handle count capacity function Section
+const numOfStudents = document.getElementById('studentsNum');
+const numOfClassrooms = document.getElementById('classroom');
+const numOfLab = document.getElementById('lab');
+const numOfHostel = document.getElementById('hostel');
+function increaseCount(element, limit, s) {
+  element.textContent = 0;
+  setInterval(() => {
+    if (+element.textContent === limit) return
+
+    const result = (Number(element.textContent)) + 1;
+    element.textContent = result
+
+  }, s)
+}
+
+increaseCount(numOfStudents, 350, 10);
+increaseCount(numOfClassrooms, 18, 100);
+increaseCount(numOfLab, 4, 100);
+increaseCount(numOfHostel, 8, 100);

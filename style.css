@@ -453,6 +453,75 @@ background-color: #0758a8;
   font-size: 16px;
 }
 
+/* Leaders section */
+.school-leaders-section {
+  padding: 2rem;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.leaders-container {
+  width: 80%;
+  max-width: 900px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.leaders-list {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: calc(300px * 6);
+  gap: 2rem;
+}
+.leaders-container h3 {
+  padding: 1rem;
+  background-color: #002a53;
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+}
+
+.leader-card img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.leader-card {
+  text-align: center;
+  width: 360px;
+}
+
+.leader-card h4 {
+  font-size: 1.4rem;
+}
+
+/* school capacity section */
+.school-capacity-section {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  padding: 12rem;
+  color: white;
+  margin-block: 8rem;
+  background-image: url(./assets/image/background1-image.jpg);
+  background-position:top ;
+  background-size: cover;
+  position: relative;
+}
+
+.school-capacity-section div {
+  text-align: center;
+  z-index: 99;
+}
+
+.school-capacity-section h1 {
+  font-size: 6rem;
+}
+
+.school-capacity-section p {
+  font-size: 2rem;
+}
 /* Footer */
 .footer {
   background-color: #004080;
@@ -655,6 +724,25 @@ footer .container {
   margin-bottom: 10px;
   border-bottom: 1px solid gray;
   color: #004080;
+}
+
+.school-capacity-section {
+  padding-block: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.capacity-div {
+  width: 150px;
+  gap: 1rem;
+}
+
+.school-capacity-section h1 {
+  font-size: 3rem;
+}
+
+.school-capacity-section p {
+  font-size: 1rem;
 }
   /* footer style */
   
