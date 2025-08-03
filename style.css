@@ -639,6 +639,10 @@ footer .container {
   }
 
   /* blogs section style  */
+  .blogs {
+    width: 100%;
+    padding-inline: 1rem;
+  }
   .news-list {
     display: flex;
     flex-direction: column;
